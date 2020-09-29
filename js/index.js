@@ -10,6 +10,18 @@ navBar.addEventListener('mouseenter', function(event){
 })
 
 // keydown
+document.addEventListener('keydown', function(event){
+    const keyName = event.key;
+    if (event.key === 'Control'){
+        return;
+    }
+
+    if(event.ctrlKey){
+        alert(`Combination of ctrlKey + ${keyName}`)
+    } else {
+        alert(`Key pressed: ${keyName}`);
+    }
+}, false);
 
 // wheel
 

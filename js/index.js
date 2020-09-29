@@ -88,3 +88,5 @@ destination.addEventListener('click', function(event){
 })
 
 // Stop the navigation items from refreshing the page by using preventDefault()
+const navLinks = document.querySelectorAll('.nav-link')
+//preventDefault()

@@ -74,6 +74,17 @@ window.addEventListener('keyup', () => {
     })
 });
 
-document.querySelector('a').addEventListener('click', event => {
-    event.preventDefault()
+// Nest two similar events in the site and prevent event propagation 
+const destination = document.querySelector('.destination')
+const destinationH4 = destination.querySelector('h4')
+
+destinationH4.addEventListener('click', function(event){
+  event.stopPropagation()
+  event.target.style.color = 'green'
 })
+
+destination.addEventListener('click', function(event){
+  event.target.style.color = 'yellow'
+})
+
+// Stop the navigation items from refreshing the page by using preventDefault()

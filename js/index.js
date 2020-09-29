@@ -2,17 +2,17 @@
 // Navigation Bar selector
 const navBar = document.querySelector('header.main-navigation')
 
-// Use mouseover to change the navigation bar to blue
+// 1. Use mouseover to change the navigation bar to blue
 navBar.addEventListener('mouseover', function(event){
     event.target.style.backgroundColor = 'skyblue'
 })
 
-// Use mouseenter to change the navigation bar to white
+// 2. Use mouseenter to change the navigation bar to white
 navBar.addEventListener('mouseenter', function(event){
-    event.target.style.backgroundColor = 'white'
+    event.target.style.backgroundColor = 'limegreen'
 })
 
-// Use keydown to console.log whenever the user clicks a button on their keyboard
+// 3. Use keydown to console.log whenever the user clicks a button on their keyboard
 // Use document
 document.addEventListener('keydown', function(event){
     const keyName = event.key;
@@ -27,26 +27,38 @@ document.addEventListener('keydown', function(event){
     }
 }, false);
 
-// Use load to console.log when the page has been fully loaded
+// 4. Use load to console.log when the page has been fully loaded
 // Use window
 window.addEventListener('load', (event) => {
     console.log('The page is fully loaded!')
 });
 
-// Use wheel to resize an image on the page
+// 5. Online
+window.addEventListener('online', (event) => {
+    console.log('You are now connected to the network')
+})
 
-// focus
-
-// resize 
-
-// scroll
-
-// select
-
-// Use dblclick to resize an image on the webpage
+// 6. Use dblclick to change the color of a container
 const card = document.querySelector('.content-section')
 card.addEventListener('dblclick', function (event){
     card.style.backgroundColor = 'royalblue'
 })
 
-// drag and drop
+// 7. Use resize to change background color
+const mainContainer = document.querySelector('.home')
+window.addEventListener('resize', (event) => {
+    mainContainer.style.backgroundColor = 'red'
+});
+
+// click event
+const images = document.querySelectorAll('img')
+console.log(images)
+window.addEventListener('click', () => {
+    images.forEach(element => {
+        element.style.transform = "rotate(180deg)";
+    });
+})
+
+// scroll event
+
+// select

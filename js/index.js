@@ -1,15 +1,19 @@
-// mouseover
+
+// Navigation Bar selector
 const navBar = document.querySelector('header.main-navigation')
+
+// Use mouseover to change the navigation bar to blue
 navBar.addEventListener('mouseover', function(event){
     event.target.style.backgroundColor = 'skyblue'
 })
 
-//mouseenter
+// Use mouseenter to change the navigation bar to white
 navBar.addEventListener('mouseenter', function(event){
     event.target.style.backgroundColor = 'white'
 })
 
-// keydown
+// Use keydown to console.log whenever the user clicks a button on their keyboard
+// Use document
 document.addEventListener('keydown', function(event){
     const keyName = event.key;
     if (event.key === 'Control'){
@@ -17,15 +21,19 @@ document.addEventListener('keydown', function(event){
     }
 
     if(event.ctrlKey){
-        alert(`Combination of ctrlKey + ${keyName}`)
+        console.log(`Combination of ctrlKey + ${keyName}`)
     } else {
-        alert(`Key pressed: ${keyName}`);
+        console.log(`Key pressed: ${keyName}`);
     }
 }, false);
 
-// wheel
+// Use load to console.log when the page has been fully loaded
+// Use window
+window.addEventListener('load', (event) => {
+    console.log('The page is fully loaded!')
+});
 
-// load 
+// Use wheel to resize an image on the page
 
 // focus
 

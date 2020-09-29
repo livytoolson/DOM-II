@@ -43,6 +43,10 @@ window.addEventListener('load', (event) => {
 
 // select
 
-// dbclick
+// Use dblclick to resize an image on the webpage
+const card = document.querySelector('.content-section')
+card.addEventListener('dblclick', function (event){
+    card.style.backgroundColor = 'royalblue'
+})
 
 // drag and drop

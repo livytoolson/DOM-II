@@ -44,7 +44,7 @@ card.addEventListener('dblclick', function (event){
     card.style.backgroundColor = 'royalblue'
 });
 
-// 7. Use resize to change background color
+// 7. Use resize to change background color to red
 const mainContainer = document.querySelector('.home')
 window.addEventListener('resize', (event) => {
     mainContainer.style.backgroundColor = 'red'
@@ -58,12 +58,22 @@ window.addEventListener('click', () => {
     })
 });
 
-// scroll event
+// 9. Use mouseover to rotate text 90 degrees
 const text = document.querySelectorAll('.text-content')
-window.addEventListener('scroll', () => {
+window.addEventListener('mouseover', () => {
     text.forEach(element => {
         element.style.transform = "rotate(90deg)";
     })
 });
 
-// select
+// 10. Use keyup to change the color of the text
+const moreText = document.querySelectorAll('p')
+window.addEventListener('keyup', () => {
+    moreText.forEach(element => {
+        element.style.color = 'orange'
+    })
+});
+
+document.querySelector('a').addEventListener('click', event => {
+    event.preventDefault()
+})
